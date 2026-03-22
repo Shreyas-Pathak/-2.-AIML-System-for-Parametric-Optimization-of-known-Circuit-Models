@@ -1,0 +1,1042 @@
+[
+  {
+    "params": {
+      "WN": 2e-06,
+      "WP": 4e-06,
+      "LW": 1e-05,
+      "WW": 1e-06,
+      "CL": 5e-15,
+      "VDD": 5
+    },
+    "metrics": {
+      "tpHL": 3.05497126631e-11,
+      "tpLH": 7.961681799999275e-13,
+      "tpavg": 1.56729404218e-11,
+      "tr": 2.69851335978e-11,
+      "tf": 3.52138996588e-11,
+      "Ctotal": 4.72995451607e-15,
+      "Reffn": 3384.03212385,
+      "Reffp": 2593.25322802,
+      "Qout": 2.36497725803e-14,
+      "Pavg": 3.4713074321e-05,
+      "Vout_max": 5.00000047684,
+      "Vout_min": 1.80480306256e-08
+    },
+    "stimulus": {
+      "Ton": 2e-10,
+      "Toff": 3e-10
+    },
+    "physics": {
+      "validity": 1,
+      "fatal": false,
+      "regime": 1,
+      "violations": [
+        [
+          6,
+          "Ctotal"
+        ]
+      ],
+      "differential_violations": [],
+      "differential_warnings": []
+    }
+  },
+  {
+    "params": {
+      "WN": 2e-06,
+      "WP": 4e-06,
+      "LW": 1.5e-05,
+      "WW": 1e-06,
+      "CL": 5e-15,
+      "VDD": 5
+    },
+    "metrics": {
+      "tpHL": 3.055190982589999e-11,
+      "tpLH": 7.943897100002667e-13,
+      "tpavg": 1.56731497704e-11,
+      "tr": 2.69874914184e-11,
+      "tf": 3.52176991558e-11,
+      "Ctotal": 4.72998371102e-15,
+      "Reffn": 3384.3763634,
+      "Reffp": 2593.46380522,
+      "Qout": 2.36499185551e-14,
+      "Pavg": 3.47138516846e-05,
+      "Vout_max": 5.00000047684,
+      "Vout_min": 1.80480306256e-08
+    },
+    "stimulus": {
+      "Ton": 2e-10,
+      "Toff": 3e-10
+    },
+    "physics": {
+      "validity": 1,
+      "fatal": false,
+      "regime": 1,
+      "violations": [
+        [
+          6,
+          "Ctotal"
+        ]
+      ],
+      "differential_violations": [
+        [
+          12,
+          "tpLH_vs_LW"
+        ]
+      ],
+      "differential_warnings": [
+        [
+          13,
+          "tpHL_vs_LW"
+        ],
+        [
+          13,
+          "tpavg_vs_LW"
+        ]
+      ]
+    }
+  },
+  {
+    "params": {
+      "WN": 2e-06,
+      "WP": 4e-06,
+      "LW": 2e-05,
+      "WW": 1e-06,
+      "CL": 5e-15,
+      "VDD": 5
+    },
+    "metrics": {
+      "tpHL": 3.05541079469e-11,
+      "tpLH": 7.925697399997903e-13,
+      "tpavg": 1.56733388424e-11,
+      "tr": 2.69897859543e-11,
+      "tf": 3.52214969449e-11,
+      "Ctotal": 4.73000487717e-15,
+      "Reffn": 3384.72617985,
+      "Reffp": 2593.67270082,
+      "Qout": 2.36500243859e-14,
+      "Pavg": 3.47139766751e-05,
+      "Vout_max": 5.0,
+      "Vout_min": 1.80480306256e-08
+    },
+    "stimulus": {
+      "Ton": 2e-10,
+      "Toff": 3e-10
+    },
+    "physics": {
+      "validity": 1,
+      "fatal": false,
+      "regime": 1,
+      "violations": [
+        [
+          6,
+          "Ctotal"
+        ]
+      ],
+      "differential_violations": [
+        [
+          12,
+          "tpLH_vs_LW"
+        ]
+      ],
+      "differential_warnings": [
+        [
+          13,
+          "tpHL_vs_LW"
+        ],
+        [
+          13,
+          "tpavg_vs_LW"
+        ]
+      ]
+    }
+  },
+  {
+    "params": {
+      "WN": 2e-06,
+      "WP": 4e-06,
+      "LW": 2.5e-05,
+      "WW": 1e-06,
+      "CL": 5e-15,
+      "VDD": 5
+    },
+    "metrics": {
+      "tpHL": 3.05563058016e-11,
+      "tpLH": 7.907081300002475e-13,
+      "tpavg": 1.56735069664e-11,
+      "tr": 2.69920125335e-11,
+      "tf": 3.52253027596e-11,
+      "Ctotal": 4.73001748437e-15,
+      "Reffn": 3385.08288971,
+      "Reffp": 2593.87975767,
+      "Qout": 2.36500874218e-14,
+      "Pavg": 3.47140764007e-05,
+      "Vout_max": 5.00000286102,
+      "Vout_min": 1.80480306256e-08
+    },
+    "stimulus": {
+      "Ton": 2e-10,
+      "Toff": 3e-10
+    },
+    "physics": {
+      "validity": 1,
+      "fatal": false,
+      "regime": 1,
+      "violations": [
+        [
+          6,
+          "Ctotal"
+        ]
+      ],
+      "differential_violations": [
+        [
+          12,
+          "tpLH_vs_LW"
+        ]
+      ],
+      "differential_warnings": [
+        [
+          13,
+          "tpHL_vs_LW"
+        ],
+        [
+          13,
+          "tpavg_vs_LW"
+        ]
+      ]
+    }
+  },
+  {
+    "params": {
+      "WN": 2e-06,
+      "WP": 4e-06,
+      "LW": 3e-05,
+      "WW": 1e-06,
+      "CL": 5e-15,
+      "VDD": 5
+    },
+    "metrics": {
+      "tpHL": 3.0558505291199996e-11,
+      "tpLH": 7.888072500002385e-13,
+      "tpavg": 1.56736562705e-11,
+      "tr": 2.69941694828e-11,
+      "tf": 3.52290970676e-11,
+      "Ctotal": 4.73002120572e-15,
+      "Reffn": 3385.4448518,
+      "Reffp": 2594.08499539,
+      "Qout": 2.36501060286e-14,
+      "Pavg": 3.47142082926e-05,
+      "Vout_max": 5.00001049042,
+      "Vout_min": 1.80480306256e-08
+    },
+    "stimulus": {
+      "Ton": 2e-10,
+      "Toff": 3e-10
+    },
+    "physics": {
+      "validity": 1,
+      "fatal": false,
+      "regime": 1,
+      "violations": [
+        [
+          6,
+          "Ctotal"
+        ]
+      ],
+      "differential_violations": [
+        [
+          12,
+          "tpLH_vs_LW"
+        ]
+      ],
+      "differential_warnings": [
+        [
+          13,
+          "tpHL_vs_LW"
+        ],
+        [
+          13,
+          "tpavg_vs_LW"
+        ]
+      ]
+    }
+  },
+  {
+    "params": {
+      "WN": 2e-06,
+      "WP": 4e-06,
+      "LW": 3.5e-05,
+      "WW": 1e-06,
+      "CL": 5e-15,
+      "VDD": 5
+    },
+    "metrics": {
+      "tpHL": 3.0560703782399996e-11,
+      "tpLH": 7.893409800000706e-13,
+      "tpavg": 1.567502238e-11,
+      "tr": 2.69980700125e-11,
+      "tf": 3.52328982467e-11,
+      "Ctotal": 4.73013183374e-15,
+      "Reffn": 3385.73095031,
+      "Reffp": 2594.39914933,
+      "Qout": 2.36506591687e-14,
+      "Pavg": 3.47143503973e-05,
+      "Vout_max": 5.00000143051,
+      "Vout_min": 1.80480306256e-08
+    },
+    "stimulus": {
+      "Ton": 2e-10,
+      "Toff": 3e-10
+    },
+    "physics": {
+      "validity": 1,
+      "fatal": false,
+      "regime": 1,
+      "violations": [
+        [
+          6,
+          "Ctotal"
+        ]
+      ],
+      "differential_violations": [],
+      "differential_warnings": [
+        [
+          13,
+          "tpHL_vs_LW"
+        ],
+        [
+          13,
+          "tpLH_vs_LW"
+        ],
+        [
+          13,
+          "tpavg_vs_LW"
+        ]
+      ]
+    }
+  },
+  {
+    "params": {
+      "WN": 2e-06,
+      "WP": 4e-06,
+      "LW": 4e-05,
+      "WW": 1e-06,
+      "CL": 5e-15,
+      "VDD": 5
+    },
+    "metrics": {
+      "tpHL": 3.05629041587e-11,
+      "tpLH": 7.914208699996916e-13,
+      "tpavg": 1.56771625122e-11,
+      "tr": 2.70031253128e-11,
+      "tf": 3.52366920343e-11,
+      "Ctotal": 4.7303125902e-15,
+      "Reffn": 3385.96612633,
+      "Reffp": 2594.78578538,
+      "Qout": 2.3651562951e-14,
+      "Pavg": 3.47140238047e-05,
+      "Vout_max": 5.00000047684,
+      "Vout_min": 1.80480306256e-08
+    },
+    "stimulus": {
+      "Ton": 2e-10,
+      "Toff": 3e-10
+    },
+    "physics": {
+      "validity": 1,
+      "fatal": false,
+      "regime": 1,
+      "violations": [
+        [
+          6,
+          "Ctotal"
+        ]
+      ],
+      "differential_violations": [],
+      "differential_warnings": [
+        [
+          13,
+          "tpHL_vs_LW"
+        ],
+        [
+          13,
+          "tpLH_vs_LW"
+        ],
+        [
+          13,
+          "tpavg_vs_LW"
+        ]
+      ]
+    }
+  },
+  {
+    "params": {
+      "WN": 2e-06,
+      "WP": 4e-06,
+      "LW": 4.5e-05,
+      "WW": 1e-06,
+      "CL": 5e-15,
+      "VDD": 5
+    },
+    "metrics": {
+      "tpHL": 3.0565104114000005e-11,
+      "tpLH": 7.933238700003313e-13,
+      "tpavg": 1.56792139924e-11,
+      "tr": 2.70080752611e-11,
+      "tf": 3.52404909771e-11,
+      "Ctotal": 4.73048335157e-15,
+      "Reffn": 3386.20893451,
+      "Reffp": 2595.16775213,
+      "Qout": 2.36524167578e-14,
+      "Pavg": 3.4712250191e-05,
+      "Vout_max": 5.00000095367,
+      "Vout_min": 1.80480306256e-08
+    },
+    "stimulus": {
+      "Ton": 2e-10,
+      "Toff": 3e-10
+    },
+    "physics": {
+      "validity": 1,
+      "fatal": false,
+      "regime": 1,
+      "violations": [
+        [
+          6,
+          "Ctotal"
+        ]
+      ],
+      "differential_violations": [],
+      "differential_warnings": [
+        [
+          13,
+          "tpHL_vs_LW"
+        ],
+        [
+          13,
+          "tpLH_vs_LW"
+        ],
+        [
+          13,
+          "tpavg_vs_LW"
+        ]
+      ]
+    }
+  },
+  {
+    "params": {
+      "WN": 2e-06,
+      "WP": 4e-06,
+      "LW": 5e-05,
+      "WW": 1e-06,
+      "CL": 5e-15,
+      "VDD": 5
+    },
+    "metrics": {
+      "tpHL": 3.05673054162e-11,
+      "tpLH": 7.950473700002437e-13,
+      "tpavg": 1.56811763938e-11,
+      "tr": 2.70129193027e-11,
+      "tf": 3.52442782679e-11,
+      "Ctotal": 4.73064408632e-15,
+      "Reffn": 3386.45778314,
+      "Reffp": 2595.54501649,
+      "Qout": 2.36532204316e-14,
+      "Pavg": 3.47104982704e-05,
+      "Vout_max": 5.00000095367,
+      "Vout_min": 1.80480306256e-08
+    },
+    "stimulus": {
+      "Ton": 2e-10,
+      "Toff": 3e-10
+    },
+    "physics": {
+      "validity": 1,
+      "fatal": false,
+      "regime": 1,
+      "violations": [
+        [
+          6,
+          "Ctotal"
+        ]
+      ],
+      "differential_violations": [],
+      "differential_warnings": [
+        [
+          13,
+          "tpHL_vs_LW"
+        ],
+        [
+          13,
+          "tpLH_vs_LW"
+        ],
+        [
+          13,
+          "tpavg_vs_LW"
+        ]
+      ]
+    }
+  },
+  {
+    "params": {
+      "WN": 2e-06,
+      "WP": 4e-06,
+      "LW": 5.5e-05,
+      "WW": 1e-06,
+      "CL": 5e-15,
+      "VDD": 5
+    },
+    "metrics": {
+      "tpHL": 3.0570631860500003e-11,
+      "tpLH": 7.955193099999882e-13,
+      "tpavg": 1.56830755806e-11,
+      "tr": 2.70176464508e-11,
+      "tf": 3.52480725183e-11,
+      "Ctotal": 4.73079361652e-15,
+      "Reffn": 3386.71530475,
+      "Reffp": 2595.91717209,
+      "Qout": 2.36539680826e-14,
+      "Pavg": 3.46998299886e-05,
+      "Vout_max": 5.00000047684,
+      "Vout_min": 1.80480306256e-08
+    },
+    "stimulus": {
+      "Ton": 2e-10,
+      "Toff": 3e-10
+    },
+    "physics": {
+      "validity": 1,
+      "fatal": false,
+      "regime": 1,
+      "violations": [
+        [
+          6,
+          "Ctotal"
+        ]
+      ],
+      "differential_violations": [],
+      "differential_warnings": [
+        [
+          13,
+          "tpHL_vs_LW"
+        ],
+        [
+          13,
+          "tpLH_vs_LW"
+        ],
+        [
+          13,
+          "tpavg_vs_LW"
+        ]
+      ]
+    }
+  },
+  {
+    "params": {
+      "WN": 2e-06,
+      "WP": 4e-06,
+      "LW": 6e-05,
+      "WW": 1e-06,
+      "CL": 5e-15,
+      "VDD": 5
+    },
+    "metrics": {
+      "tpHL": 3.05728596579e-11,
+      "tpLH": 7.968583600001909e-13,
+      "tpavg": 1.56848590096e-11,
+      "tr": 2.70222541878e-11,
+      "tf": 3.52518650057e-11,
+      "Ctotal": 4.73093152038e-15,
+      "Reffn": 3386.98096423,
+      "Reffp": 2596.28421162,
+      "Qout": 2.36546576019e-14,
+      "Pavg": 3.47012427453e-05,
+      "Vout_max": 5.00000047684,
+      "Vout_min": 1.80480306256e-08
+    },
+    "stimulus": {
+      "Ton": 2e-10,
+      "Toff": 3e-10
+    },
+    "physics": {
+      "validity": 1,
+      "fatal": false,
+      "regime": 1,
+      "violations": [
+        [
+          6,
+          "Ctotal"
+        ]
+      ],
+      "differential_violations": [],
+      "differential_warnings": [
+        [
+          13,
+          "tpHL_vs_LW"
+        ],
+        [
+          13,
+          "tpLH_vs_LW"
+        ],
+        [
+          13,
+          "tpavg_vs_LW"
+        ]
+      ]
+    }
+  },
+  {
+    "params": {
+      "WN": 2e-06,
+      "WP": 4e-06,
+      "LW": 6.5e-05,
+      "WW": 1e-06,
+      "CL": 5e-15,
+      "VDD": 5
+    },
+    "metrics": {
+      "tpHL": 3.0575051323099997e-11,
+      "tpLH": -1.3749549999931903e-14,
+      "tpavg": 1.52944004343e-11,
+      "tr": 2.85095412751e-11,
+      "tf": 3.52556588233e-11,
+      "Ctotal": 4.80850087093e-15,
+      "Reffn": 3332.70179111,
+      "Reffp": 2694.99429148,
+      "Qout": 2.40425043547e-14,
+      "Pavg": 3.47587886196e-05,
+      "Vout_max": 5.00000572205,
+      "Vout_min": 1.80480306256e-08
+    },
+    "stimulus": {
+      "Ton": 2e-10,
+      "Toff": 3e-10
+    },
+    "physics": {
+      "validity": 1,
+      "fatal": false,
+      "regime": 2,
+      "violations": [
+        [
+          8,
+          "tpLH"
+        ],
+        [
+          6,
+          "Ctotal"
+        ]
+      ],
+      "differential_violations": [
+        [
+          12,
+          "tpLH_vs_LW"
+        ],
+        [
+          12,
+          "tpavg_vs_LW"
+        ]
+      ],
+      "differential_warnings": [
+        [
+          13,
+          "tpHL_vs_LW"
+        ]
+      ]
+    }
+  },
+  {
+    "params": {
+      "WN": 2e-06,
+      "WP": 4e-06,
+      "LW": 7e-05,
+      "WW": 1e-06,
+      "CL": 5e-15,
+      "VDD": 5
+    },
+    "metrics": {
+      "tpHL": 3.0577116216299997e-11,
+      "tpLH": -1.3264970000071578e-14,
+      "tpavg": 1.52951905956e-11,
+      "tr": 2.85098616392e-11,
+      "tf": 3.52594490148e-11,
+      "Ctotal": 4.80830556872e-15,
+      "Reffn": 3333.1954574,
+      "Reffp": 2695.13404101,
+      "Qout": 2.40415278436e-14,
+      "Pavg": 3.47629422334e-05,
+      "Vout_max": 5.00000619888,
+      "Vout_min": 1.80480306256e-08
+    },
+    "stimulus": {
+      "Ton": 2e-10,
+      "Toff": 3e-10
+    },
+    "physics": {
+      "validity": 1,
+      "fatal": false,
+      "regime": 2,
+      "violations": [
+        [
+          8,
+          "tpLH"
+        ],
+        [
+          6,
+          "Ctotal"
+        ]
+      ],
+      "differential_violations": [],
+      "differential_warnings": [
+        [
+          13,
+          "tpHL_vs_LW"
+        ],
+        [
+          13,
+          "tpLH_vs_LW"
+        ],
+        [
+          13,
+          "tpavg_vs_LW"
+        ]
+      ]
+    }
+  },
+  {
+    "params": {
+      "WN": 2e-06,
+      "WP": 4e-06,
+      "LW": 7.5e-05,
+      "WW": 1e-06,
+      "CL": 5e-15,
+      "VDD": 5
+    },
+    "metrics": {
+      "tpHL": 3.05794283445e-11,
+      "tpLH": -1.3027899999704343e-14,
+      "tpavg": 1.52962281225e-11,
+      "tr": 2.85101750278e-11,
+      "tf": 3.52632363658e-11,
+      "Ctotal": 4.80811001267e-15,
+      "Reffn": 3333.68907126,
+      "Reffp": 2695.27328472,
+      "Qout": 2.40405500634e-14,
+      "Pavg": 3.47595785613e-05,
+      "Vout_max": 5.00000667572,
+      "Vout_min": 1.80480306256e-08
+    },
+    "stimulus": {
+      "Ton": 2e-10,
+      "Toff": 3e-10
+    },
+    "physics": {
+      "validity": 1,
+      "fatal": false,
+      "regime": 2,
+      "violations": [
+        [
+          8,
+          "tpLH"
+        ],
+        [
+          6,
+          "Ctotal"
+        ]
+      ],
+      "differential_violations": [],
+      "differential_warnings": [
+        [
+          13,
+          "tpHL_vs_LW"
+        ],
+        [
+          13,
+          "tpLH_vs_LW"
+        ],
+        [
+          13,
+          "tpavg_vs_LW"
+        ]
+      ]
+    }
+  },
+  {
+    "params": {
+      "WN": 2e-06,
+      "WP": 4e-06,
+      "LW": 8e-05,
+      "WW": 1e-06,
+      "CL": 5e-15,
+      "VDD": 5
+    },
+    "metrics": {
+      "tpHL": 3.05817505149e-11,
+      "tpLH": -1.279762999969e-14,
+      "tpavg": 1.52972740721e-11,
+      "tr": 2.85104814764e-11,
+      "tf": 3.52670219595e-11,
+      "Ctotal": 4.80791447882e-15,
+      "Reffn": 3334.18254373,
+      "Reffp": 2695.41187122,
+      "Qout": 2.40395723941e-14,
+      "Pavg": 3.47550453368e-05,
+      "Vout_max": 5.00000762939,
+      "Vout_min": 1.80480306256e-08
+    },
+    "stimulus": {
+      "Ton": 2e-10,
+      "Toff": 3e-10
+    },
+    "physics": {
+      "validity": 1,
+      "fatal": false,
+      "regime": 2,
+      "violations": [
+        [
+          8,
+          "tpLH"
+        ],
+        [
+          6,
+          "Ctotal"
+        ]
+      ],
+      "differential_violations": [],
+      "differential_warnings": [
+        [
+          13,
+          "tpHL_vs_LW"
+        ],
+        [
+          13,
+          "tpLH_vs_LW"
+        ],
+        [
+          13,
+          "tpavg_vs_LW"
+        ]
+      ]
+    }
+  },
+  {
+    "params": {
+      "WN": 2e-06,
+      "WP": 4e-06,
+      "LW": 8.5e-05,
+      "WW": 1e-06,
+      "CL": 5e-15,
+      "VDD": 5
+    },
+    "metrics": {
+      "tpHL": 3.05828167559e-11,
+      "tpLH": -1.1306480000036055e-14,
+      "tpavg": 1.5297061619e-11,
+      "tr": 2.85107817931e-11,
+      "tf": 3.52708099613e-11,
+      "Ctotal": 4.80771857172e-15,
+      "Reffn": 3334.67654291,
+      "Reffp": 2695.55009851,
+      "Qout": 2.40385928586e-14,
+      "Pavg": 3.47511921134e-05,
+      "Vout_max": 5.00000810623,
+      "Vout_min": 1.80480306256e-08
+    },
+    "stimulus": {
+      "Ton": 2e-10,
+      "Toff": 3e-10
+    },
+    "physics": {
+      "validity": 1,
+      "fatal": false,
+      "regime": 2,
+      "violations": [
+        [
+          8,
+          "tpLH"
+        ],
+        [
+          6,
+          "Ctotal"
+        ]
+      ],
+      "differential_violations": [
+        [
+          12,
+          "tpavg_vs_LW"
+        ]
+      ],
+      "differential_warnings": [
+        [
+          13,
+          "tpHL_vs_LW"
+        ]
+      ]
+    }
+  },
+  {
+    "params": {
+      "WN": 2e-06,
+      "WP": 4e-06,
+      "LW": 9e-05,
+      "WW": 1e-06,
+      "CL": 5e-15,
+      "VDD": 5
+    },
+    "metrics": {
+      "tpHL": 3.06516350366e-11,
+      "tpLH": -7.768655999996603e-14,
+      "tpavg": 1.53646607986e-11,
+      "tr": 2.85110742285e-11,
+      "tf": 3.52745921158e-11,
+      "Ctotal": 4.80752233801e-15,
+      "Reffn": 3335.17025608,
+      "Reffp": 2695.68777503,
+      "Qout": 2.403761169e-14,
+      "Pavg": 3.4759750063e-05,
+      "Vout_max": 5.00000858307,
+      "Vout_min": 1.80480306256e-08
+    },
+    "stimulus": {
+      "Ton": 2e-10,
+      "Toff": 3e-10
+    },
+    "physics": {
+      "validity": 1,
+      "fatal": false,
+      "regime": 2,
+      "violations": [
+        [
+          8,
+          "tpLH"
+        ],
+        [
+          6,
+          "Ctotal"
+        ]
+      ],
+      "differential_violations": [
+        [
+          12,
+          "tpLH_vs_LW"
+        ]
+      ],
+      "differential_warnings": [
+        [
+          13,
+          "tpHL_vs_LW"
+        ],
+        [
+          13,
+          "tpavg_vs_LW"
+        ]
+      ]
+    }
+  },
+  {
+    "params": {
+      "WN": 2e-06,
+      "WP": 4e-06,
+      "LW": 9.5e-05,
+      "WW": 1e-06,
+      "CL": 5e-15,
+      "VDD": 5
+    },
+    "metrics": {
+      "tpHL": 3.05879700272e-11,
+      "tpLH": -1.1340680000010561e-14,
+      "tpavg": 1.52996553555e-11,
+      "tr": 2.85113607758e-11,
+      "tf": 3.52783812686e-11,
+      "Ctotal": 4.80732585846e-15,
+      "Reffn": 3335.66484185,
+      "Reffp": 2695.82504393,
+      "Qout": 2.40366292923e-14,
+      "Pavg": 3.47478618014e-05,
+      "Vout_max": 5.00000953674,
+      "Vout_min": 1.80480306256e-08
+    },
+    "stimulus": {
+      "Ton": 2e-10,
+      "Toff": 3e-10
+    },
+    "physics": {
+      "validity": 1,
+      "fatal": false,
+      "regime": 2,
+      "violations": [
+        [
+          8,
+          "tpLH"
+        ],
+        [
+          6,
+          "Ctotal"
+        ]
+      ],
+      "differential_violations": [
+        [
+          12,
+          "tpHL_vs_LW"
+        ],
+        [
+          12,
+          "tpavg_vs_LW"
+        ]
+      ],
+      "differential_warnings": []
+    }
+  },
+  {
+    "params": {
+      "WN": 2e-06,
+      "WP": 4e-06,
+      "LW": 0.0001,
+      "WW": 1e-06,
+      "CL": 5e-15,
+      "VDD": 5
+    },
+    "metrics": {
+      "tpHL": 3.0589265063700006e-11,
+      "tpLH": -1.0070210000048444e-14,
+      "tpavg": 1.52996676376e-11,
+      "tr": 2.85116425961e-11,
+      "tf": 3.52821640775e-11,
+      "Ctotal": 4.80712956406e-15,
+      "Reffn": 3336.15873969,
+      "Reffp": 2695.96177324,
+      "Qout": 2.40356478203e-14,
+      "Pavg": 3.47629539444e-05,
+      "Vout_max": 5.00001001358,
+      "Vout_min": 1.80480306256e-08
+    },
+    "stimulus": {
+      "Ton": 2e-10,
+      "Toff": 3e-10
+    },
+    "physics": {
+      "validity": 1,
+      "fatal": false,
+      "regime": 2,
+      "violations": [
+        [
+          8,
+          "tpLH"
+        ],
+        [
+          6,
+          "Ctotal"
+        ]
+      ],
+      "differential_violations": [],
+      "differential_warnings": [
+        [
+          13,
+          "tpHL_vs_LW"
+        ],
+        [
+          13,
+          "tpavg_vs_LW"
+        ]
+      ]
+    }
+  }
+]

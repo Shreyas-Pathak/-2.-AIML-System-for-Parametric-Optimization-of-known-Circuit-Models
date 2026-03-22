@@ -1,0 +1,26 @@
+[
+  {
+    "metrics": {
+      ".step wn": 5e-05,
+      "tnom": 27.0,
+      "temp": 27.0
+    },
+    "log_json": "C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\spice\\runs\\logs\\testbench_S2.log.json"
+  },
+  {
+    "metrics": {
+      ".step wn": 5e-05,
+      "tnom": 27.0,
+      "temp": 27.0
+    },
+    "log_json": "C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\spice\\runs\\logs\\testbench_S2.log.json"
+  },
+  {
+    "metrics": {
+      ".step wn": 5e-05,
+      "tnom": 27.0,
+      "temp": 27.0
+    },
+    "log_json": "C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\spice\\runs\\logs\\testbench_S2.log.json"
+  }
+]

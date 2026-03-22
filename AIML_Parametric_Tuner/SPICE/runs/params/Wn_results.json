@@ -1,0 +1,338 @@
+{
+  "1": {
+    "params": {
+      "Wn": 2e-06,
+      "Wp": 4e-06,
+      "Lw": 1e-05,
+      "Ww": 1e-06,
+      "CL": 4e-12,
+      "VDD": 5
+    },
+    "metrics": {
+      "error": "Command '\"C:\\Users\\Shreyas Pathak\\AppData\\Local\\Programs\\ADI\\LTspice\\LTspice.exe\" -b \"C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\SPICE\\runs\\netlists\\Draft2_run.asc\"' returned non-zero exit status 1."
+    },
+    "log": null
+  },
+  "2": {
+    "params": {
+      "Wn": 4e-06,
+      "Wp": 4e-06,
+      "Lw": 1e-05,
+      "Ww": 1e-06,
+      "CL": 4e-12,
+      "VDD": 5
+    },
+    "metrics": {
+      "error": "Command '\"C:\\Users\\Shreyas Pathak\\AppData\\Local\\Programs\\ADI\\LTspice\\LTspice.exe\" -b \"C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\SPICE\\runs\\netlists\\Draft2_run.asc\"' returned non-zero exit status 1."
+    },
+    "log": null
+  },
+  "3": {
+    "params": {
+      "Wn": 6e-06,
+      "Wp": 4e-06,
+      "Lw": 1e-05,
+      "Ww": 1e-06,
+      "CL": 4e-12,
+      "VDD": 5
+    },
+    "metrics": {
+      "error": "Command '\"C:\\Users\\Shreyas Pathak\\AppData\\Local\\Programs\\ADI\\LTspice\\LTspice.exe\" -b \"C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\SPICE\\runs\\netlists\\Draft2_run.asc\"' returned non-zero exit status 1."
+    },
+    "log": null
+  },
+  "4": {
+    "params": {
+      "Wn": 8e-06,
+      "Wp": 4e-06,
+      "Lw": 1e-05,
+      "Ww": 1e-06,
+      "CL": 4e-12,
+      "VDD": 5
+    },
+    "metrics": {
+      "error": "Command '\"C:\\Users\\Shreyas Pathak\\AppData\\Local\\Programs\\ADI\\LTspice\\LTspice.exe\" -b \"C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\SPICE\\runs\\netlists\\Draft2_run.asc\"' returned non-zero exit status 1."
+    },
+    "log": null
+  },
+  "5": {
+    "params": {
+      "Wn": 9.999999999999999e-06,
+      "Wp": 4e-06,
+      "Lw": 1e-05,
+      "Ww": 1e-06,
+      "CL": 4e-12,
+      "VDD": 5
+    },
+    "metrics": {
+      "error": "Command '\"C:\\Users\\Shreyas Pathak\\AppData\\Local\\Programs\\ADI\\LTspice\\LTspice.exe\" -b \"C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\SPICE\\runs\\netlists\\Draft2_run.asc\"' returned non-zero exit status 1."
+    },
+    "log": null
+  },
+  "6": {
+    "params": {
+      "Wn": 1.1999999999999999e-05,
+      "Wp": 4e-06,
+      "Lw": 1e-05,
+      "Ww": 1e-06,
+      "CL": 4e-12,
+      "VDD": 5
+    },
+    "metrics": {
+      "error": "Command '\"C:\\Users\\Shreyas Pathak\\AppData\\Local\\Programs\\ADI\\LTspice\\LTspice.exe\" -b \"C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\SPICE\\runs\\netlists\\Draft2_run.asc\"' returned non-zero exit status 1."
+    },
+    "log": null
+  },
+  "7": {
+    "params": {
+      "Wn": 1.3999999999999998e-05,
+      "Wp": 4e-06,
+      "Lw": 1e-05,
+      "Ww": 1e-06,
+      "CL": 4e-12,
+      "VDD": 5
+    },
+    "metrics": {
+      "error": "Command '\"C:\\Users\\Shreyas Pathak\\AppData\\Local\\Programs\\ADI\\LTspice\\LTspice.exe\" -b \"C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\SPICE\\runs\\netlists\\Draft2_run.asc\"' returned non-zero exit status 1."
+    },
+    "log": null
+  },
+  "8": {
+    "params": {
+      "Wn": 1.6e-05,
+      "Wp": 4e-06,
+      "Lw": 1e-05,
+      "Ww": 1e-06,
+      "CL": 4e-12,
+      "VDD": 5
+    },
+    "metrics": {
+      "error": "Command '\"C:\\Users\\Shreyas Pathak\\AppData\\Local\\Programs\\ADI\\LTspice\\LTspice.exe\" -b \"C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\SPICE\\runs\\netlists\\Draft2_run.asc\"' returned non-zero exit status 1."
+    },
+    "log": null
+  },
+  "9": {
+    "params": {
+      "Wn": 1.8e-05,
+      "Wp": 4e-06,
+      "Lw": 1e-05,
+      "Ww": 1e-06,
+      "CL": 4e-12,
+      "VDD": 5
+    },
+    "metrics": {
+      "error": "Command '\"C:\\Users\\Shreyas Pathak\\AppData\\Local\\Programs\\ADI\\LTspice\\LTspice.exe\" -b \"C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\SPICE\\runs\\netlists\\Draft2_run.asc\"' returned non-zero exit status 1."
+    },
+    "log": null
+  },
+  "10": {
+    "params": {
+      "Wn": 2e-05,
+      "Wp": 4e-06,
+      "Lw": 1e-05,
+      "Ww": 1e-06,
+      "CL": 4e-12,
+      "VDD": 5
+    },
+    "metrics": {
+      "error": "Command '\"C:\\Users\\Shreyas Pathak\\AppData\\Local\\Programs\\ADI\\LTspice\\LTspice.exe\" -b \"C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\SPICE\\runs\\netlists\\Draft2_run.asc\"' returned non-zero exit status 1."
+    },
+    "log": null
+  },
+  "11": {
+    "params": {
+      "Wn": 2.2000000000000003e-05,
+      "Wp": 4e-06,
+      "Lw": 1e-05,
+      "Ww": 1e-06,
+      "CL": 4e-12,
+      "VDD": 5
+    },
+    "metrics": {
+      "error": "Command '\"C:\\Users\\Shreyas Pathak\\AppData\\Local\\Programs\\ADI\\LTspice\\LTspice.exe\" -b \"C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\SPICE\\runs\\netlists\\Draft2_run.asc\"' returned non-zero exit status 1."
+    },
+    "log": null
+  },
+  "12": {
+    "params": {
+      "Wn": 2.4000000000000004e-05,
+      "Wp": 4e-06,
+      "Lw": 1e-05,
+      "Ww": 1e-06,
+      "CL": 4e-12,
+      "VDD": 5
+    },
+    "metrics": {
+      "error": "Command '\"C:\\Users\\Shreyas Pathak\\AppData\\Local\\Programs\\ADI\\LTspice\\LTspice.exe\" -b \"C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\SPICE\\runs\\netlists\\Draft2_run.asc\"' returned non-zero exit status 1."
+    },
+    "log": null
+  },
+  "13": {
+    "params": {
+      "Wn": 2.6000000000000005e-05,
+      "Wp": 4e-06,
+      "Lw": 1e-05,
+      "Ww": 1e-06,
+      "CL": 4e-12,
+      "VDD": 5
+    },
+    "metrics": {
+      "error": "Command '\"C:\\Users\\Shreyas Pathak\\AppData\\Local\\Programs\\ADI\\LTspice\\LTspice.exe\" -b \"C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\SPICE\\runs\\netlists\\Draft2_run.asc\"' returned non-zero exit status 1."
+    },
+    "log": null
+  },
+  "14": {
+    "params": {
+      "Wn": 2.8000000000000006e-05,
+      "Wp": 4e-06,
+      "Lw": 1e-05,
+      "Ww": 1e-06,
+      "CL": 4e-12,
+      "VDD": 5
+    },
+    "metrics": {
+      "error": "Command '\"C:\\Users\\Shreyas Pathak\\AppData\\Local\\Programs\\ADI\\LTspice\\LTspice.exe\" -b \"C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\SPICE\\runs\\netlists\\Draft2_run.asc\"' returned non-zero exit status 1."
+    },
+    "log": null
+  },
+  "15": {
+    "params": {
+      "Wn": 3.0000000000000008e-05,
+      "Wp": 4e-06,
+      "Lw": 1e-05,
+      "Ww": 1e-06,
+      "CL": 4e-12,
+      "VDD": 5
+    },
+    "metrics": {
+      "error": "Command '\"C:\\Users\\Shreyas Pathak\\AppData\\Local\\Programs\\ADI\\LTspice\\LTspice.exe\" -b \"C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\SPICE\\runs\\netlists\\Draft2_run.asc\"' returned non-zero exit status 1."
+    },
+    "log": null
+  },
+  "16": {
+    "params": {
+      "Wn": 3.2000000000000005e-05,
+      "Wp": 4e-06,
+      "Lw": 1e-05,
+      "Ww": 1e-06,
+      "CL": 4e-12,
+      "VDD": 5
+    },
+    "metrics": {
+      "error": "Command '\"C:\\Users\\Shreyas Pathak\\AppData\\Local\\Programs\\ADI\\LTspice\\LTspice.exe\" -b \"C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\SPICE\\runs\\netlists\\Draft2_run.asc\"' returned non-zero exit status 1."
+    },
+    "log": null
+  },
+  "17": {
+    "params": {
+      "Wn": 3.4000000000000007e-05,
+      "Wp": 4e-06,
+      "Lw": 1e-05,
+      "Ww": 1e-06,
+      "CL": 4e-12,
+      "VDD": 5
+    },
+    "metrics": {
+      "error": "Command '\"C:\\Users\\Shreyas Pathak\\AppData\\Local\\Programs\\ADI\\LTspice\\LTspice.exe\" -b \"C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\SPICE\\runs\\netlists\\Draft2_run.asc\"' returned non-zero exit status 1."
+    },
+    "log": null
+  },
+  "18": {
+    "params": {
+      "Wn": 3.600000000000001e-05,
+      "Wp": 4e-06,
+      "Lw": 1e-05,
+      "Ww": 1e-06,
+      "CL": 4e-12,
+      "VDD": 5
+    },
+    "metrics": {
+      "error": "Command '\"C:\\Users\\Shreyas Pathak\\AppData\\Local\\Programs\\ADI\\LTspice\\LTspice.exe\" -b \"C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\SPICE\\runs\\netlists\\Draft2_run.asc\"' returned non-zero exit status 1."
+    },
+    "log": null
+  },
+  "19": {
+    "params": {
+      "Wn": 3.800000000000001e-05,
+      "Wp": 4e-06,
+      "Lw": 1e-05,
+      "Ww": 1e-06,
+      "CL": 4e-12,
+      "VDD": 5
+    },
+    "metrics": {
+      "error": "Command '\"C:\\Users\\Shreyas Pathak\\AppData\\Local\\Programs\\ADI\\LTspice\\LTspice.exe\" -b \"C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\SPICE\\runs\\netlists\\Draft2_run.asc\"' returned non-zero exit status 1."
+    },
+    "log": null
+  },
+  "20": {
+    "params": {
+      "Wn": 4.000000000000001e-05,
+      "Wp": 4e-06,
+      "Lw": 1e-05,
+      "Ww": 1e-06,
+      "CL": 4e-12,
+      "VDD": 5
+    },
+    "metrics": {
+      "error": "Command '\"C:\\Users\\Shreyas Pathak\\AppData\\Local\\Programs\\ADI\\LTspice\\LTspice.exe\" -b \"C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\SPICE\\runs\\netlists\\Draft2_run.asc\"' returned non-zero exit status 1."
+    },
+    "log": null
+  },
+  "21": {
+    "params": {
+      "Wn": 4.200000000000001e-05,
+      "Wp": 4e-06,
+      "Lw": 1e-05,
+      "Ww": 1e-06,
+      "CL": 4e-12,
+      "VDD": 5
+    },
+    "metrics": {
+      "error": "Command '\"C:\\Users\\Shreyas Pathak\\AppData\\Local\\Programs\\ADI\\LTspice\\LTspice.exe\" -b \"C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\SPICE\\runs\\netlists\\Draft2_run.asc\"' returned non-zero exit status 1."
+    },
+    "log": null
+  },
+  "22": {
+    "params": {
+      "Wn": 4.400000000000001e-05,
+      "Wp": 4e-06,
+      "Lw": 1e-05,
+      "Ww": 1e-06,
+      "CL": 4e-12,
+      "VDD": 5
+    },
+    "metrics": {
+      "error": "Command '\"C:\\Users\\Shreyas Pathak\\AppData\\Local\\Programs\\ADI\\LTspice\\LTspice.exe\" -b \"C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\SPICE\\runs\\netlists\\Draft2_run.asc\"' returned non-zero exit status 1."
+    },
+    "log": null
+  },
+  "23": {
+    "params": {
+      "Wn": 4.6000000000000014e-05,
+      "Wp": 4e-06,
+      "Lw": 1e-05,
+      "Ww": 1e-06,
+      "CL": 4e-12,
+      "VDD": 5
+    },
+    "metrics": {
+      "error": "Command '\"C:\\Users\\Shreyas Pathak\\AppData\\Local\\Programs\\ADI\\LTspice\\LTspice.exe\" -b \"C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\SPICE\\runs\\netlists\\Draft2_run.asc\"' returned non-zero exit status 1."
+    },
+    "log": null
+  },
+  "24": {
+    "params": {
+      "Wn": 4.8000000000000015e-05,
+      "Wp": 4e-06,
+      "Lw": 1e-05,
+      "Ww": 1e-06,
+      "CL": 4e-12,
+      "VDD": 5
+    },
+    "metrics": {
+      "error": "Command '\"C:\\Users\\Shreyas Pathak\\AppData\\Local\\Programs\\ADI\\LTspice\\LTspice.exe\" -b \"C:\\3rd Yr\\Projects\\AIML_Parametric_Tuner\\SPICE\\runs\\netlists\\Draft2_run.asc\"' returned non-zero exit status 1."
+    },
+    "log": null
+  }
+}
