@@ -2,10 +2,7 @@ import json
 import numpy as np
 from pathlib import Path
 
-# ============================================================
-# FILE PATHS (EDIT IF NEEDED)
-# ============================================================
-
+# FILE PATHS
 DATA_DIR = Path(r"C:\3rd Yr\Projects\AIML_Parametric_Tuner\DATA")
 
 JSON_PATHS = {
@@ -15,9 +12,7 @@ JSON_PATHS = {
     "WW": DATA_DIR / "Ww_Sweep_S2_results.json",
 }
 
-# ============================================================
 # CONSTANTS
-# ============================================================
 
 EPS_DELAY = 1e-12
 EPS_NUM = 1e-15
@@ -33,9 +28,7 @@ CAP_ERR_TOL = 0.35
 REL_SLOPE_WARN = 0.05        # 5% relative change
 VIOLATION_HYST = 0.20        # 20% opposite slope
 
-# ============================================================
 # VIOLATION CODES
-# ============================================================
 
 OUTPUT_NOT_RAIL = 1
 EXCESSIVE_UNDERSHOOT = 2
@@ -52,9 +45,7 @@ WIRE_LIMITED = 11
 DIFF_VIOLATION = 12
 DIFF_WARNING = 13
 
-# ============================================================
 # EXPECTED DIFFERENTIAL TRENDS
-# ============================================================
 
 EXPECTED_TRENDS = {
     "WN": {"tpHL": -1, "tpavg": -1, "tf": -1, "Reffn": -1},
@@ -63,13 +54,10 @@ EXPECTED_TRENDS = {
     "WW": {"tpHL": +1, "tpLH": +1, "tpavg": +1},
 }
 
-# ============================================================
 # HELPERS
-# ============================================================
 
 def RC_delay(R, C):
     return R * C
-
 
 def Cphysics(p):
     Cox = 6e-3
@@ -87,10 +75,8 @@ def Cphysics(p):
         (C0 + C1 * Ww) * Lw +
         CL
     )
-
-# ============================================================
+    
 # FIRST-ORDER PHYSICS CHECKER
-# ============================================================
 
 def physics_check(sample):
     p, m, s = sample["params"], sample["metrics"], sample["stimulus"]
@@ -107,7 +93,7 @@ def physics_check(sample):
     Qout = m["Qout"]
     Vmax, Vmin = m["Vout_max"], m["Vout_min"]
 
-    # ---------------- Output validity ----------------
+    # Output validity
 
     if Vmax < 0.9 * VDD or Vmin > 0.1 * VDD:
         violations.append([OUTPUT_NOT_RAIL, "Vout"])
@@ -115,8 +101,6 @@ def physics_check(sample):
 
     if Vmax > 1.05 * VDD or Vmin < -0.05 * VDD:
         violations.append([EXCESSIVE_UNDERSHOOT, "Vout"])
-
-    # ---------------- Delay sanity ----------------
 
     for name, val in {"tpHL": tpHL, "tpLH": tpLH, "tr": tr, "tf": tf}.items():
         if val < 0:
@@ -126,7 +110,7 @@ def physics_check(sample):
                 violations.append([NEGATIVE_DELAY, name])
                 fatal = True
 
-    # ---------------- Pulse width ----------------
+    # Pulse width
 
     if tr > s["Ton"]:
         violations.append([PULSE_WIDTH, "tr"])
@@ -136,7 +120,7 @@ def physics_check(sample):
         violations.append([PULSE_WIDTH, "tf"])
         fatal = True
 
-    # ---------------- Non-monotonic ----------------
+    # Non-monotonic
 
     if abs(tpLH) > EPS_DELAY and tr > 1.5 * abs(tpLH):
         violations.append([NON_MONOTONIC, "tr"])
@@ -144,7 +128,7 @@ def physics_check(sample):
     if abs(tpHL) > EPS_DELAY and tf > 1.5 * abs(tpHL):
         violations.append([NON_MONOTONIC, "tf"])
 
-    # ---------------- Capacitance consistency ----------------
+    # Capacitance consistency
 
     Cphy = Cphysics(p)
     Ceff = Qout / VDD
@@ -152,7 +136,7 @@ def physics_check(sample):
     if abs((Cphy - Ceff) / max(Cphy, EPS_NUM)) > CAP_ERR_TOL:
         violations.append([PHYSICS_BREAK, "Ctotal"])
 
-    # ---------------- Regime classification ----------------
+    # Regime classification 
 
     rHL = tpHL / RC_delay(Reffp, Cphy)
     rLH = tpLH / RC_delay(Reffn, Cphy)
@@ -192,9 +176,7 @@ def physics_check(sample):
         "differential_warnings": [],
     }
 
-# ============================================================
-# DIFFERENTIAL CHECKER (FIXED)
-# ============================================================
+# DIFFERENTIAL CHECKER
 
 def differential_check(samples, swept_param):
     trends = EXPECTED_TRENDS.get(swept_param, {})
@@ -225,11 +207,9 @@ def differential_check(samples, swept_param):
             slope = dy / dp
             rel_change = abs(dy) / max(abs(y1), EPS_NUM)
 
-            # Strong contradiction → violation
             if slope * sign < -VIOLATION_HYST * abs(slope):
                 dv.append([DIFF_VIOLATION, f"{metric}_vs_{swept_param}"])
 
-            # Weak or flat → warning
             elif rel_change < REL_SLOPE_WARN:
                 dw.append([DIFF_WARNING, f"{metric}_vs_{swept_param}"])
 
@@ -239,10 +219,8 @@ def differential_check(samples, swept_param):
         })
 
     return results
-
-# ============================================================
+    
 # MAIN DRIVER
-# ============================================================
 
 def run_file(json_path: Path, swept_param: str):
     with open(json_path, "r") as f:
@@ -265,9 +243,6 @@ def run_file(json_path: Path, swept_param: str):
 def main():
     for swept_param, path in JSON_PATHS.items():
         run_file(path, swept_param)
-# ============================================================
-# ENTRY POINT
-# ============================================================
 
 if __name__ == "__main__":
     main()
