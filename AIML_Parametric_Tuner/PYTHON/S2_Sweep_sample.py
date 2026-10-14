@@ -4,9 +4,6 @@ import subprocess
 import shutil
 from typing import Dict, Any, List
 
-# ============================================================
-# IMPORT LTspice SAMPLER UTILITIES
-# ============================================================
 try:
     from LH_Sampler_inverter import *  # noqa
 except Exception:
@@ -17,10 +14,6 @@ except Exception:
             "Failed to import LH_Sampler_inverter.py — check location"
         ) from e
 
-
-# ============================================================
-# FIXED PARAMETERS (non-swept defaults)
-# ============================================================
 BASE_PARAMS = {
     "WN": 2e-6,
     "WP": 4e-6,
@@ -36,9 +29,7 @@ TP = 5e-10
 TOFF = TP - TON
 
 
-# ============================================================
 # NETLIST MOD HELPERS
-# ============================================================
 def delete_line_tbs2(file_path: Path, text_to_delete: str) -> None:
     if not file_path.exists():
         return
@@ -59,9 +50,7 @@ def append_line_to_testbenchS2(file_path: Path, line: str) -> None:
     file_path.write_text("\n".join(lines) + "\n")
 
 
-# ============================================================
 # LTspice LOG PARSER
-# ============================================================
 def parse_ltspice_log(log_path: Path) -> List[Dict[str, Any]]:
     entries = []
     current = None
@@ -81,9 +70,8 @@ def parse_ltspice_log(log_path: Path) -> List[Dict[str, Any]]:
     return entries
 
 
-# ============================================================
-# METRIC EXTRACTION (CORRECTED)
-# ============================================================
+
+# METRIC EXTRACTION
 def extract_metrics(log_path: Path, param_name: str) -> List[Dict[str, Any]]:
 
     entries = parse_ltspice_log(log_path)
@@ -154,10 +142,7 @@ def extract_metrics(log_path: Path, param_name: str) -> List[Dict[str, Any]]:
 
     return samples
 
-
-# ============================================================
 # GENERIC SWEEP RUNNER
-# ============================================================
 def run_sweep(
     param: str,
     step_line: str,
@@ -190,9 +175,6 @@ def run_sweep(
     delete_line_tbs2(netlist_path, step_line)
 
 
-# ============================================================
-# MAIN
-# ============================================================
 def main():
 
     project_root = Path(r"C:\3rd Yr\Projects\AIML_Parametric_Tuner")
