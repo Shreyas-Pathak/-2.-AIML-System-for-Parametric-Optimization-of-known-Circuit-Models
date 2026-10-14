@@ -2,17 +2,11 @@ import json
 import numpy as np
 from pathlib import Path
 
-# ============================================================
-# LOAD DATA
-# ============================================================
 input_path = Path(r"C:\3rd Yr\Projects\AIML_Parametric_Tuner\DATA\lhs_dataset.json")
 
 with open(input_path, 'r') as file:
     data = json.load(file)
 
-# ============================================================
-# ALLOCATE ARRAYS
-# ============================================================
 N = 120
 
 X = np.ones((N, 5))
@@ -25,9 +19,7 @@ Ctotal = np.zeros((N, 1))
 Reffn = np.zeros((N, 1))
 Reffp = np.zeros((N, 1))
 
-# ============================================================
 # DESIGN MATRIX
-# ============================================================
 for i in range(N):
     X[i][1] = data[i]["params"]["WN"]
     X[i][2] = data[i]["params"]["WP"]
@@ -42,9 +34,7 @@ X[:, 1:] = (X[:, 1:] - mu) / sigma
 
 XT = X.T
 
-# ============================================================
 # METRICS
-# ============================================================
 for i in range(N):
     tpHL[i][0] = data[i]["metrics"]["tpHL"]
     tpLH[i][0] = data[i]["metrics"]["tpLH"]
@@ -55,9 +45,7 @@ for i in range(N):
     Reffn[i][0] = data[i]["metrics"]["reffn: tfnext/(2.2*ctotal)"]
     Reffp[i][0] = data[i]["metrics"]["reffp: trnext/(2.2*ctotal)"]
 
-# ============================================================
 # NORMAL EQUATION
-# ============================================================
 A = XT @ X
 B = np.linalg.inv(A)
 
@@ -70,9 +58,7 @@ beta_vector_Ctotal = B @ XT @ Ctotal
 beta_vector_Reffn = B @ XT @ Reffn
 beta_vector_Reffp = B @ XT @ Reffp
 
-# ============================================================
 # REGRESSION PREDICTOR
-# ============================================================
 def Regression_Prediction(Wn, Wp, Lw, Ww):
     x = np.array([Wn, Wp, Lw, Ww])
     x = (x - mu) / sigma
@@ -89,9 +75,7 @@ def Regression_Prediction(Wn, Wp, Lw, Ww):
         (A @ beta_vector_Reffp).item()
     ]
 
-# ============================================================
-# DELTAS (FIXED)
-# ============================================================
+# DELTAS 
 tpHL_delta = []
 tpLH_delta = []
 Pavg_delta = []
@@ -116,7 +100,7 @@ LR_output = input_path.parent / "regression_LR_output.json"
 for i in range(N):
     a, b, c, d = Xraw[i][1], Xraw[i][2], Xraw[i][3], Xraw[i][4]
     pred = Regression_Prediction(a, b, c, d)
-    # store predictions
+    # predictions
     tpHL_pred.append(pred[0])
     tpLH_pred.append(pred[1])
     Pavg_pred.append(pred[2])
@@ -126,7 +110,7 @@ for i in range(N):
     Reffn_pred.append(pred[6])
     Reffp_pred.append(pred[7])
 
-    # store deltas
+    # deltas
     tpHL_delta.append(-pred[0] + tpHL[i][0])
     tpLH_delta.append(-pred[1] + tpLH[i][0])
     Pavg_delta.append(-pred[2] + Pavg[i][0])
@@ -138,9 +122,7 @@ for i in range(N):
 
 
 
-# ============================================================
-# SAVE DELTAS TO JSON
-# ============================================================
+# SAVING
 output_delta = {
     "tpHL_delta": [float(x) for x in tpHL_delta],
     "tpLH_delta": [float(x) for x in tpLH_delta],
@@ -157,9 +139,6 @@ output_path = input_path.parent / "regression_deltas.json"
 with open(output_path, "w", encoding="utf-8") as f:
     json.dump(output_delta, f, indent=4)
 
-# ============================================================
-# SAVE LR PREDICTIONS TO JSON
-# ============================================================
 output_pred = {
     "tpHL": [float(x) for x in tpHL_pred],
     "tpLH": [float(x) for x in tpLH_pred],
