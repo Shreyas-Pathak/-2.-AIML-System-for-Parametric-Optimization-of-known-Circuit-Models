@@ -4,9 +4,7 @@ import json
 import os
 from scipy.optimize import minimize
 
-# ============================================================
 # NORMALIZATION
-# ============================================================
 
 def normalize_1d(X, eps=1e-8):
     mu = np.mean(X)
@@ -16,20 +14,12 @@ def normalize_1d(X, eps=1e-8):
 def denormalize_1d(Xn, mu, sigma):
     return Xn * sigma + mu
 
-# ============================================================
-# DISTANCE + KERNEL
-# ============================================================
-
 def compute_sqdist(X):
     X = X.reshape(-1, 1)
     return (X - X.T) ** 2
 
 def build_covariance_from_sqdist(sqdist, l, sigma_f):
     return sigma_f**2 * np.exp(-0.5 * sqdist / (l**2))
-
-# ============================================================
-# GP CORE
-# ============================================================
 
 def gp_cholesky_and_alpha(sqdist, y, l, sigma_f, sigma_n):
     K = build_covariance_from_sqdist(sqdist, l, sigma_f)
@@ -43,9 +33,6 @@ def gp_cholesky_and_alpha(sqdist, y, l, sigma_f, sigma_n):
     alpha = np.linalg.solve(L.T, np.linalg.solve(L, y))
     return L, alpha
 
-# ============================================================
-# GP PREDICTION
-# ============================================================
 
 def gp_predict(sqdist, X_train, y_train, x_test, l, sigma_f, sigma_n):
     L, alpha = gp_cholesky_and_alpha(sqdist, y_train, l, sigma_f, sigma_n)
@@ -61,10 +48,6 @@ def gp_predict(sqdist, X_train, y_train, x_test, l, sigma_f, sigma_n):
     sigma_star = max(k_xx - (v.T @ v).item(), 0.0)
 
     return mu_star, sigma_star
-
-# ============================================================
-# OPTIMIZATION
-# ============================================================
 
 def neg_log_marginal_likelihood(log_l, sqdist, y, sigma_f, sigma_n):
     l = np.exp(log_l[0])
@@ -88,10 +71,6 @@ def optimize_l(sqdist, y, sigma_f, sigma_n):
         raise RuntimeError(res.message)
 
     return np.exp(res.x[0])
-
-# ============================================================
-# STAGE-3 INFERENCE
-# ============================================================
 
 def stage3_predict_all(LR_metrics, X_train, y_train, sqdist, hyperparams, norm_stats):
     results = {}
@@ -124,10 +103,6 @@ def stage3_predict_all(LR_metrics, X_train, y_train, sqdist, hyperparams, norm_s
 
     return results
 
-# ============================================================
-# MAIN
-# ============================================================
-
 def main():
 
     LR_path = r"C:\3rd Yr\Projects\AIML_Parametric_Tuner\DATA\regression_LR_output.json"
@@ -146,9 +121,6 @@ def main():
 
     X_train, y_train, sqdist, norm_stats = {}, {}, {}, {}
 
-    # --------------------------------------------------------
-    # PREP
-    # --------------------------------------------------------
     for m in metrics:
         Xn, Xm, Xs = normalize_1d(np.array(LR[m]))
         yn, ym, ys = normalize_1d(np.array(DELTA[f"{m}_delta"]))
@@ -162,9 +134,6 @@ def main():
             "y_mu": ym, "y_sigma": ys
         }
 
-    # --------------------------------------------------------
-    # TRAIN GP
-    # --------------------------------------------------------
     hyperparams = {}
 
     for m in metrics:
@@ -179,9 +148,6 @@ def main():
             "sigma_n": float(sigma_n)
         }
 
-    # --------------------------------------------------------
-    # PREDICTIONS
-    # --------------------------------------------------------
     N = len(LR[metrics[0]])
     predictions = []
 
@@ -199,9 +165,6 @@ def main():
 
         predictions.append(pred)
 
-    # --------------------------------------------------------
-    # SAVE EVERYTHING
-    # --------------------------------------------------------
     output = {
         "hyperparameters": hyperparams,
         "predictions": predictions
@@ -212,10 +175,6 @@ def main():
 
     print("Saved full Stage-3 output to:")
     print(OUT_path)
-
-# ============================================================
-# ENTRY
-# ============================================================
 
 if __name__ == "__main__":
     main()
