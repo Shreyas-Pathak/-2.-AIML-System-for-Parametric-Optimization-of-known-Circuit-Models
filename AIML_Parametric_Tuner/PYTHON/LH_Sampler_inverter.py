@@ -5,9 +5,7 @@ from pathlib import Path
 import numpy as np
 import re
 
-# ==========================================================
-# USER CONFIGURATION
-# ==========================================================
+
 
 LTSPICE_EXE = r"C:\Users\Shreyas Pathak\AppData\Local\Programs\ADI\LTspice\LTspice.exe"
 
@@ -21,9 +19,7 @@ DATA_FILE = PROJECT_ROOT / "data/lhs_dataset.json"
 
 N_SAMPLES = 120
 
-# ==========================================================
 # PARAMETER RANGES
-# ==========================================================
 
 PARAM_RANGES = {
     "WN": (4e-6, 50e-6),
@@ -34,9 +30,7 @@ PARAM_RANGES = {
     "NFP": (1, 4),
 }
 
-# ==========================================================
 # LHS SAMPLING
-# ==========================================================
 
 def latin_hypercube_sampling(ranges, n_samples):
     dim = len(ranges)
@@ -61,9 +55,7 @@ def latin_hypercube_sampling(ranges, n_samples):
 
     return samples
 
-# ==========================================================
 # NETLIST GENERATION
-# ==========================================================
 
 def write_netlist(template_path, output_path, params):
     with open(template_path, "r") as f:
@@ -75,9 +67,7 @@ def write_netlist(template_path, output_path, params):
     with open(output_path, "w") as f:
         f.write(text)
 
-# ==========================================================
 # LOG PARSING
-# ==========================================================
 
 def parse_log(log_path):
     results = {}
@@ -91,15 +81,13 @@ def parse_log(log_path):
 
             left, right = line.split("=", 1)
             key_raw = left.strip().lower()
-
-            # extract first floating-point number only
+            
             match = re.search(r"[-+]?\d*\.?\d+(?:[eE][-+]?\d+)?", right)
             if not match:
                 continue
 
             val = float(match.group())
 
-            # normalize delay names
             if key_raw == "tphl":
                 results["tpHL"] = val
             elif key_raw == "tplh":
@@ -151,8 +139,6 @@ def main():
         if not results:
             print("  ⚠️ Empty measurements, skipping")
             continue
-
-        # ---------- EXPLICIT METRICS DEFINITION ----------
         metrics = {}
         metrics["tpHL"] = results.get("tpHL", None)
         metrics["tpLH"] = results.get("tpLH", None)
@@ -160,7 +146,6 @@ def main():
         for k, v in results.items():
             if k not in ("tpHL", "tpLH"):
                 metrics[k] = v
-        # ------------------------------------------------
 
         dataset.append({
             "params": params,
@@ -172,9 +157,6 @@ def main():
 
     print(f"\n✔ Dataset saved to {DATA_FILE}")
 
-# ==========================================================
-# ENTRY
-# ==========================================================
 
 if __name__ == "__main__":
     main()
